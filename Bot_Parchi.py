@@ -18,7 +18,7 @@ def distanza(update: Update, context: CallbackContext) -> None:
         d = []
         for i in range(0,len(coord_x)):
             d.append(dist(lat1,lon1,coord_x[i],coord_y[i]))
-        e = d[:]        #uso "e" come copia
+        e = d[:]
         d.sort()
         ind = 0
         for i in range(0,len(d)):
@@ -41,7 +41,7 @@ def echo(update: Update, context: CallbackContext) -> None:
     context.bot.send_message(chat_id=update.effective_chat.id, text=testo)
 
 def main():
-    updater = Updater("1915954757:AAGzinL25-jV6A_5olz6KEVxCUxOCGLBsXk")
+    updater = Updater("bot-id")
     dispatcher = updater.dispatcher
 
     dispatcher.add_handler(CommandHandler("start", start))
